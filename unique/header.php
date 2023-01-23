@@ -29,31 +29,34 @@
 		<div class="site-branding">
 			<?php
 			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$unique_description = get_bloginfo( 'description', 'display' );
-			if ( $unique_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $unique_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
-			<?php endif; ?>
+	 ?>
 		</div><!-- .site-branding -->
 
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'unique' ); ?></button>
-			<?php
-			wp_nav_menu(
-				array(
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
-				)
-			);
-			?>
+		<div class="main-off-menu">
+		<img src="./wp-content/uploads/2023/01/navshape.png" onclick="openNav()" class="open_btn" style="cursor:pointer" > 
+	
+
+
+<div id="mySidenav" class="sidenav">
+<img src="./wp-content/uploads/2023/01/icons8-close-50.png" onclick="closeNav()" class="closebtn" style="cursor:pointer" >
+
+  <div class="inner-menu">
+<div class="first-col height-con">
+
+</div>
+<div class="sec-col height-con"><h4  class=" menu-head">Our Work</h4></div>
+<div class="third-col height-con"><h4 class=" menu-head">Services</h4>
+<div class="inner-con">
+<?php wp_nav_menu( array( 'theme_location' => 'services-menu' ) ); ?>
+
+</div>
+</div>
+<div class="fourth-col height-con"><h4 class=" menu-head">Resources</h4></div>
+<div class="fifth-col height-con"></div>
+
+		</div>
+
+		
+
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->

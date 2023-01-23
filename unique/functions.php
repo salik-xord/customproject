@@ -12,13 +12,18 @@ if ( ! defined( '_S_VERSION' ) ) {
 	define( '_S_VERSION', '1.0.0' );
 }
 
-/**
- * Sets up theme defaults and registers support for various WordPress features.
- *
- * Note that this function is hooked into the after_setup_theme hook, which
- * runs before the init hook. The init hook is too late for some features, such
- * as indicating support for post thumbnails.
- */
+
+function theme_files(){
+    wp_enqueue_style('main-style', get_template_directory_uri() . './style.css');
+wp_enqueue_style('bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css');
+wp_enqueue_script('bootstrap-js','https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js', array('jquery'),true,true);
+
+}
+
+add_action('wp_enqueue_scripts', 'theme_files');
+
+
+
 function unique_setup() {
 	/*
 		* Make theme available for translation.
@@ -52,6 +57,10 @@ function unique_setup() {
 			'menu-1' => esc_html__( 'Primary', 'unique' ),
 		)
 	);
+	function register_my_menu() {
+		register_nav_menu('services-menu',__( 'Services Menu' ));
+	  }
+	  add_action( 'init', 'register_my_menu' );
 
 	/*
 		* Switch default core markup for search form, comment form, and comments
