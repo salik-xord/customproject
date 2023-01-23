@@ -70,6 +70,7 @@ html {
 	line-height: 1.15;
 	-webkit-text-size-adjust: 100%;
 }
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300;400;500;600;700;800&display=swap');
 
 /* Sections
 	 ========================================================================== */
@@ -81,6 +82,14 @@ body {
 	margin: 0;
 }
 
+h1,h2,h3,h4,h5{
+	font-family: 'Red Hat Display', sans-serif;
+	color: #ecf1f4;
+	font-weight: 600;
+}
+div{
+	padding:20px;
+}
 /**
  * Render the `main` element consistently in IE.
  */
@@ -415,6 +424,9 @@ h4,
 h5,
 h6 {
 	clear: both;
+}
+h4{
+	font-size: 32px;
 }
 
 p {
@@ -966,4 +978,219 @@ textarea {
 	margin-left: auto;
 	margin-right: auto;
 	margin-bottom: 1.5em;
+}
+.dropbtn {
+    color: #fff;
+    padding: 20px;
+    font-size: 17px;
+    list-style: none;
+    border: none;
+}
+.open_btn {
+	position: absolute;
+    width: 1.5%;
+    top: 5.5%;
+    right: 5rem;
+    padding: 0;
+
+	
+}
+.dropup {
+  position: relative;
+  display: block;
+}
+	img.custom-logo{
+width: 65%;
+	}
+
+
+.dropup-content {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    background: #000;
+    top: 1%;
+    right: -200px;
+    border-radius: 2px;
+}
+.dropup-content-token {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    background: #000;
+    top: 2%;
+    right: -200px;
+    border-radius: 2px;
+}
+.dropup-content-dapp {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    background: #000;
+    top: 2%;
+    right: -200px;
+    border-radius: 2px;
+}
+.dropup-content-resource {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    background: #000;
+    top: 2%;
+    right: -200px;
+    border-radius: 2px;
+}
+.dropup-content-about {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    background: #000;
+    top: 2%;
+    right: -200px;
+    border-radius: 2px;
+}
+i.fa-solid.fa-greater-than {
+    font-weight: 300;
+    font-size: 14px;
+}
+
+.dropup-content a {
+  color: #fafafa!important;
+	font-family: 'AeonikProTRIAL';
+  padding: 10px 16px!important;
+  text-decoration: none;
+  display: block;
+}
+
+
+.dropup:hover .dropup-content, .dropup:hover .dropup-content-dapp, .dropup:hover .dropup-content-token, .dropup:hover .dropup-content-resource, .dropup:hover .dropup-content-about {
+  display: block;
+}
+
+
+
+
+
+.sidenav {
+    height: 100vh;
+    width: 0;
+	padding: 0;
+    align-items: center;
+    /* justify-content: center; */
+    position: fixed;
+    display: flex;
+    z-index: 1;
+font-family: 'NB Akae Std';
+    top: 0;
+    right: 0;
+    background-color: #000;
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.sidenav a {
+  padding: 20px;
+  text-decoration: none;
+  font-size: 17px;
+  color: #fafafa;
+	font-family: 'NB Akae Std';
+  display: block;
+  transition: 0.3s;
+}
+.walletz {
+    background-color: #ffffff;
+    border: 1px solid #ffffff;
+    color: #000000!important;
+    /* width: 200px; */
+    margin-top: 100px;
+    border-radius: 2px;
+    padding: 12px 37px!important;
+    margin-left: 20px;
+    /* padding: 20px; */
+}
+
+
+header#masthead {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-left: 5rem;
+    padding-right: 5rem;
+	padding-top:15px;
+    /* padding: 20px 5rem; */
+}
+.sidenav .closebtn {
+    position: absolute;
+	width: 2%;
+    top: 5.5%;
+    right: 5rem;
+    padding: 0;
+}
+.topnav .icon {
+  display: none;
+}
+.site-branding {
+    z-index: 2;
+	padding:0;
+}
+
+/* mega menu */
+
+.inner-menu {
+    padding-left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-right: 0;
+}
+.first-col , .fifth-col {
+    width: 5.75%;
+}
+
+.sec-col , .third-col , .fourth-col{
+	width: 29.5%;
+}
+.height-con{
+	height: 36vh;
+}
+.first-col {
+    border-color: rgba(255,255,255,0.20);
+
+    border: 1px solid;
+border-left:0;
+    border-right: 0;
+}
+.sec-col {
+    border: 1px solid rgba(255,255,255,0.20);
+}
+.third-col , .fourth-col{
+	  border: 1px solid rgba(255,255,255,0.20);
+	  border-left: 0;
+}
+.fifth-col{
+	  border: 1px solid rgba(255,255,255,0.20);
+	  border-left: 0;
+	  border-right:0;
+}
+.height-con ul {
+    padding-left: 0;
+    margin-left: 0;
+    list-style-type: none;
+}
+.height-con ul li a {
+    color: #ECF1F4 !important;
+    opacity: 0.6 !important;
+    padding-left: 0;
+    padding-top: 0;
+	font-family: 'Red Hat Display';
+    padding-bottom: 5px;
+    font-size: 20px;
+}
+.inner-con {
+    padding: 0;
+    margin-top: 4%;
+}
+.menu-services-menu-container {
+    padding: 0;
 }
