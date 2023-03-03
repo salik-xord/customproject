@@ -17,7 +17,7 @@ function theme_files(){
     wp_enqueue_style('main-style', get_template_directory_uri() . './style.css');
 wp_enqueue_style('bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css');
 wp_enqueue_script('bootstrap-js','https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js', array('jquery'),true,true);
-
+wp_enqueue_script('navigation-js',get_template_directory_uri() . './js/navigation.js', array('jquery'),true,true);
 }
 
 add_action('wp_enqueue_scripts', 'theme_files');
@@ -59,9 +59,18 @@ function unique_setup() {
 	);
 	function register_my_menu() {
 		register_nav_menu('services-menu',__( 'Services Menu' ));
+		register_nav_menu('resources-menu',__( 'Resources Menu' ));
+		register_nav_menu('company-menu',__( 'Company Menu' ));
+		register_nav_menu('company-footer',__( 'Company Footer' ));
+		register_nav_menu('resource-footer',__( 'Resource Footer' ));
 	  }
 	  add_action( 'init', 'register_my_menu' );
 
+
+
+
+
+	  
 	/*
 		* Switch default core markup for search form, comment form, and comments
 		* to output valid HTML5.
